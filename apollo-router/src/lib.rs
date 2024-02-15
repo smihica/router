@@ -80,6 +80,7 @@ pub mod tracer;
 mod uplink;
 
 pub use crate::axum_factory::unsupported_set_axum_router_callback;
+pub use crate::axum_factory::utils::ConnectionInfo;
 pub use crate::configuration::Configuration;
 pub use crate::configuration::ListenAddr;
 pub use crate::context::extensions::sync::ExtensionsMutex;
