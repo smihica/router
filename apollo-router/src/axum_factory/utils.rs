@@ -157,9 +157,12 @@ pub(crate) struct InjectConnectionInfo<S> {
 }
 
 #[derive(Clone)]
-pub(crate) struct ConnectionInfo {
-    pub(crate) peer_address: Option<SocketAddr>,
-    pub(crate) server_address: Option<SocketAddr>,
+/// Connection Information
+pub struct ConnectionInfo {
+    /// peer ip address
+    pub peer_address: Option<SocketAddr>,
+    /// server addresss
+    pub server_address: Option<SocketAddr>,
 }
 
 impl<S> InjectConnectionInfo<S> {

@@ -323,9 +323,12 @@ impl Query {
         let query = query.into();
 
         let doc = Self::parse_document(&query, schema, configuration);
+        tracing::info!("1");
         Self::check_errors(&doc)?;
+        tracing::info!("2");
         let (fragments, operations, defer_stats, schema_aware_hash) =
             Self::extract_query_information(schema, &doc.executable, &doc.ast)?;
+        tracing::info!("3");
 
         Ok(Query {
             string: query,
